@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Cafe Finder</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-gray-100">
+
+<header class="bg-amber-700 text-white p-4 shadow-md">
+
+    <h1 class="text-3xl font-bold text-center">
+        ☕ Cafe Finder
+    </h1>
+
+    <p class="text-center">
+        Find nearby cafes around you
+    </p>
+
+</header>
+
+<div class="grid md:grid-cols-3 gap-4 p-4">
+
+    <!-- Sidebar -->
+
+    <div class="bg-white rounded-lg shadow p-4">
+
+        <div class="mb-4">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+                class="w-full p-2 border rounded mb-2"
+            >
+
+            <button
+                id="searchBtn"
+                class="w-full bg-amber-700 text-white p-2 rounded"
+            >
+                Search City
+            </button>
+
+        </div>
+
+        <h2 class="text-xl font-semibold mb-3">
+            Nearby Cafes
+        </h2>
+
+        <ul id="cafeList"></ul>
+
+    </div>
+
+    <!-- Map -->
+
+    <div class="md:col-span-2">
+
+        <div id="map"></div>
+
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
